@@ -1,0 +1,173 @@
+{
+  "MediaService": {
+    "memcached": {
+      "addr": "192.168.1.120",
+      "port": 31211
+    },
+    "mongodb": {
+      "addr": "192.168.1.120",
+      "port": 32212
+    },
+    "redis": {
+      "addr": "192.168.1.120",
+      "port": 32214
+    }
+  },
+  "System": {
+    "timeoutAsMsForPoller": 8000,
+    "timeoutAsMsForDRC": 60000,
+    "pollTimeInternalAsUs": 10,
+    "memoryRegionSize": 1048576,
+    "messageSizeOfFabric": 1024
+  },
+  "Gateway": {
+    "gatewayIP": "192.168.1.126",
+    "httpPort": 8082,
+    "grpcPort": 50012,
+    "engineConnPort": 10012,
+    "numIOWorkers": 1,
+    "listenBacklog": 64
+  },
+  "Engines": [
+    {
+      "guid": 101,
+      "engineIP": "192.168.1.126",
+      "agentConnPort": 10020,
+      "engineTCPPort": -1,
+      "numIOWorkers": 1,
+      "gatewayConnPerWorker": 2,
+      "rootPathForIPC": "/dev/shm/ipc2",
+      "deviceName": "mlx5_0",
+      "devicePort": 1,
+      "deviceGidIndex": 3
+    },
+    {
+      "guid": 102,
+      "engineIP": "192.168.1.129",
+      "agentConnPort": 10020,
+      "engineTCPPort": -1,
+      "numIOWorkers": 1,
+      "gatewayConnPerWorker": 2,
+      "rootPathForIPC": "/dev/shm/ipc2",
+      "deviceName": "mlx5_0",
+      "devicePort": 1,
+      "deviceGidIndex": 3
+    }
+  ],
+  "Agents": [
+    {
+      "guid": 201,
+      "deviceName": "mlx5_2",
+      "devicePort": 1,
+      "deviceGidIndex": 2,
+      "numIOWorkers": 1,
+      "BindEngineGuid": 101
+    },
+    {
+      "guid": 202,
+      "deviceName": "mlx5_2",
+      "devicePort": 1,
+      "deviceGidIndex": 1,
+      "numIOWorkers": 1,
+      "BindEngineGuid": 102
+    }
+  ],
+  "Functions": [
+    {
+      "funcName": "exp02UploadMovieId1",
+      "funcId": 20,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadText1",
+      "funcId": 21,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadUniqueId1",
+      "funcId": 22,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadUserId1",
+      "funcId": 23,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadRating2",
+      "funcId": 24,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadMovieId3",
+      "funcId": 25,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadRating3",
+      "funcId": 26,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadText3",
+      "funcId": 27,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadUniqueId3",
+      "funcId": 28,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadUserId3",
+      "funcId": 29,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadMovieReview4",
+      "funcId": 30,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02ReadReview4",
+      "funcId": 31,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02StoreReview4",
+      "funcId": 32,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02UploadUserReview4",
+      "funcId": 33,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02RegisterMovieId",
+      "funcId": 34,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    },
+    {
+      "funcName": "exp02ComposeReview",
+      "funcId": 35,
+      "minWorkers": 1,
+      "maxWorkers": 24
+    }
+  ]
+}
