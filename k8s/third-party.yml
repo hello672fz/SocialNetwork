@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: fuyao-benchmarks
+  name: CXL-benchmarks
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: memcached-deployment
-  namespace: fuyao-benchmarks
+  namespace: CXL-benchmarks
   labels:
     app: memcached
 spec:
@@ -34,7 +34,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: memcached-service
-  namespace: fuyao-benchmarks
+  namespace: CXL-benchmarks
 spec:
   selector:
     app: memcached
@@ -50,7 +50,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb-deployment
-  namespace: fuyao-benchmarks
+  namespace: CXL-benchmarks
   labels:
     app: mongodb
 spec:
@@ -83,7 +83,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-service
-  namespace: fuyao-benchmarks
+  namespace: CXL-benchmarks
 spec:
   selector:
     app: mongodb
@@ -99,7 +99,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-deployment
-  namespace: fuyao-benchmarks
+  namespace: CXL-benchmarks
   labels:
     app: redis
 spec:
@@ -126,7 +126,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-service
-  namespace: fuyao-benchmarks
+  namespace: CXL-benchmarks
 spec:
   selector:
     app: redis
